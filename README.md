@@ -30,7 +30,7 @@ Save every emoji in Apple Color Emoji as a full-resolution PNG named after the e
 ## 🚀 Quick start
 
 ```sh
-git clone https://github.com/Aleksandar-Borisov/emoji-extractor.git
+git clone https://github.com/Alek-Borisov/emoji-extractor.git
 cd emoji-extractor
 sh emoji-extractor.sh
 ```
