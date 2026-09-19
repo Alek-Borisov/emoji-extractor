@@ -2,12 +2,12 @@
 
 **by Alek Borisov**
 
+[![Latest release](https://img.shields.io/github/v/release/Alek-Borisov/emoji-extractor?color=FF9800)](https://github.com/Alek-Borisov/emoji-extractor/releases/latest)
 ![macOS Golden Gate](https://img.shields.io/badge/macOS-Golden%20Gate-000000?logo=apple&logoColor=white)
 ![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
-![Version 1.1](https://img.shields.io/badge/version-1.1-FF9800)
-![License: All Rights Reserved](https://img.shields.io/badge/license-All%20Rights%20Reserved-lightgrey)
+[![License: All Rights Reserved](https://img.shields.io/badge/license-All%20Rights%20Reserved-lightgrey)](LICENSE)
 
-Save every emoji in Apple Color Emoji as a full-resolution PNG named after the emoji itself, like `eagle.png` or `waving hand - medium skin tone.png`, from a colorful orange-themed terminal interface. Everything the tool needs runs in a temporary Python environment that is deleted afterwards, so your Python installation and Xcode setup are never touched.
+Save every emoji in Apple Color Emoji as a full-resolution PNG named after the emoji itself, like `eagle.png` or `waving hand - medium skin tone.png`, from an orange-themed terminal interface. Everything runs in a temporary Python environment that is deleted afterwards, so your Python installation and Xcode setup are never touched.
 
 > **New in 1.1:** macOS Golden Gate support, clean names that work on every system, one folder of 160 px PNGs, a fresh result on every run, and nothing left behind. See the [changelog](CHANGELOG.md).
 
@@ -25,7 +25,7 @@ Save every emoji in Apple Color Emoji as a full-resolution PNG named after the e
 
 - **macOS Golden Gate** (macOS 27)
 - **Python 3.9 or newer.** The `python3` from Apple's Command Line Tools works. If it's missing, run `xcode-select --install`.
-- **An internet connection** to download the packages into the temporary environment.
+- **An internet connection.** The packages are downloaded fresh on every run, because nothing is kept afterwards.
 
 ## 🚀 Quick start
 
@@ -41,7 +41,9 @@ When it's done, open the results:
 open Emojis
 ```
 
-**Without Git:** download `emoji-extractor.sh` and `emoji-extractor.py` into the same folder and run the `.sh` file from Terminal, for example `sh ~/Downloads/emoji-extractor.sh`. The `Emojis` folder is always created next to the two files.
+**Without Git:** download **Source code (zip)** from the [latest release](https://github.com/Alek-Borisov/emoji-extractor/releases/latest) and unzip it. In Terminal, type `sh ` (with a space), drag `emoji-extractor.sh` into the window and press Return. The `Emojis` folder is created next to the script.
+
+**Updating:** run `git pull` in the `emoji-extractor` folder, or download the latest release again.
 
 > [!TIP]
 > If macOS asks whether Terminal may access the folder, click **Allow**.
@@ -105,6 +107,7 @@ File names contain only letters, digits, spaces, hyphens, periods and apostrophe
 
 | Message or situation | What to do |
 | --- | --- |
+| `sh: emoji-extractor.sh: No such file or directory` | Terminal isn't in the folder with the script. Use `cd` to go there first, or type `sh ` and drag the `.sh` file into the Terminal window. |
 | `python3 not found` | Install Apple's Command Line Tools with `xcode-select --install`, then run again. |
 | `… holds files this script didn't make` | Your `Emojis` folder contains files the tool didn't create. Move them somewhere else and run again. |
 | `emoji-extractor.py has to be in the same folder as this script` | Put both files in one folder. If your browser renamed a download (for example to `emoji-extractor (1).py`), rename it back. |
@@ -134,3 +137,7 @@ All rights reserved by the author. For any other use, **ask for written permissi
 
 **All Rights Reserved** – see [LICENSE](LICENSE).
 Permission is granted to **use** and **share** this tool, unmodified, for personal or internal purposes only.
+
+## 📝 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
