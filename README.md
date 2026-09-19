@@ -29,24 +29,33 @@ Save every emoji in Apple Color Emoji as a full-resolution PNG named after the e
 
 ## 🚀 Quick start
 
+Everything happens in `~/Downloads/emoji-extractor`. The first time, open Terminal and run:
+
 ```sh
+cd ~/Downloads
 git clone https://github.com/Alek-Borisov/emoji-extractor.git
 cd emoji-extractor
+sh emoji-extractor.sh
+```
+
+To run it again later, with any updates:
+
+```sh
+cd ~/Downloads/emoji-extractor
+git pull
 sh emoji-extractor.sh
 ```
 
 When it's done, open the results:
 
 ```sh
-open Emojis
+open ~/Downloads/emoji-extractor/Emojis
 ```
 
 **Without Git:** download **Source code (zip)** from the [latest release](https://github.com/Alek-Borisov/emoji-extractor/releases/latest) and unzip it. In Terminal, type `sh ` (with a space), drag `emoji-extractor.sh` into the window and press Return. The `Emojis` folder is created next to the script.
 
-**Updating:** run `git pull` in the `emoji-extractor` folder, or download the latest release again.
-
 > [!TIP]
-> If macOS asks whether Terminal may access the folder, click **Allow**.
+> If macOS asks whether Terminal may access your Downloads folder, click **Allow**.
 
 ### Options
 
@@ -62,7 +71,7 @@ Example: `sh emoji-extractor.sh --theme mono`
 ## 📂 Output
 
 ```text
-emoji-extractor/
+~/Downloads/emoji-extractor/
 ├── emoji-extractor.sh
 ├── emoji-extractor.py
 └── Emojis/
@@ -107,7 +116,7 @@ File names contain only letters, digits, spaces, hyphens, periods and apostrophe
 
 | Message or situation | What to do |
 | --- | --- |
-| `sh: emoji-extractor.sh: No such file or directory` | Terminal isn't in the folder with the script. Use `cd` to go there first, or type `sh ` and drag the `.sh` file into the Terminal window. |
+| `sh: emoji-extractor.sh: No such file or directory` | Terminal isn't in the folder with the script. Run `cd ~/Downloads/emoji-extractor` first, or type `sh ` and drag the `.sh` file into the Terminal window. |
 | `python3 not found` | Install Apple's Command Line Tools with `xcode-select --install`, then run again. |
 | `… holds files this script didn't make` | Your `Emojis` folder contains files the tool didn't create. Move them somewhere else and run again. |
 | `emoji-extractor.py has to be in the same folder as this script` | Put both files in one folder. If your browser renamed a download (for example to `emoji-extractor (1).py`), rename it back. |
